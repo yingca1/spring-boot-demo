@@ -1,16 +1,10 @@
-demo1 是最简单的 springboot + dubbo 的结构
 
-demo2 在 demo1 的基础上增加 sentinel 
+1. 项目介绍
 
-[Sentinel Dubbo Demo](https://github.com/alibaba/Sentinel/tree/master/sentinel-demo/sentinel-demo-dubbo)
+demo1 springboot + dubbo 项目脚手架
 
-```bash
-# provider
--Djava.net.preferIPv4Stack=true -Dcsp.sentinel.api.port=8720 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=demo2-dubbo-provider
+demo2 测试 sentinel 相关功能 
 
-# consumer
--Djava.net.preferIPv4Stack=true -Dcsp.sentinel.api.port=8721 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=demo2-dubbo-consumer
+2. 其他
 
-# start dashboard (default username/password : sentinel/sentinel)
-java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard.jar
-```
+项目采用 mvn ci-friendly 方式构建
