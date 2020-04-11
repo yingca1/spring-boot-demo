@@ -8,10 +8,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>me.caiying</groupId>
-  <artifactId>demo1-dubbo-provider</artifactId>
+  <artifactId>demo1-dubbo-consumer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>demo1-dubbo-provider</name>
-  <description>demo1 dubbo service provider</description>
+  <name>demo1-dubbo-consumer</name>
+  <description>Demo project for Spring Boot</description>
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -20,18 +20,10 @@
   </licenses>
   <properties>
     <dubbo.version>2.7.4.1</dubbo.version>
-    <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
     <maven.deploy.skip>true</maven.deploy.skip>
   </properties>
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>com.alibaba.cloud</groupId>
-        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>${spring-cloud-alibaba.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
       <dependency>
         <groupId>org.apache.dubbo</groupId>
         <artifactId>dubbo-dependencies-bom</artifactId>
@@ -48,15 +40,7 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-thymeleaf</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -92,59 +76,10 @@
     </dependency>
   </dependencies>
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <excludes>
-          <exclude>application*.properties</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <filtering>true</filtering>
-        <directory>src/main/resources</directory>
-        <includes>
-          <include>application.properties</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>src/main/resources</directory>
-        <includes>
-          <include>com/**/*.xml</include>
-          <include>spring/*</include>
-          <include>*.xml</include>
-        </includes>
-      </resource>
-    </resources>
     <plugins>
-      <plugin>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>3.0.0</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.1.0</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.8.2</version>
-      </plugin>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <goals>
-              <goal>repackage</goal>
-              <goal>build-info</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <mainClass>me.caiying.demo1.Demo1ProviderApplication</mainClass>
-          <addResources>true</addResources>
-          <fork>true</fork>
-          <skip>false</skip>
-        </configuration>
       </plugin>
     </plugins>
   </build>

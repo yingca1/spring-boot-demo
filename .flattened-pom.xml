@@ -20,14 +20,16 @@
   </licenses>
   <modules>
     <module>demo1-dubbo-provider</module>
+    <module>demo1-dubbo-consumer</module>
+    <module>demo1-dubbo-interface</module>
   </modules>
   <properties>
-    <java.version>1.8</java.version>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
     <revision>0.0.1-SNAPSHOT</revision>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
   <build>
     <plugins>

@@ -25,6 +25,8 @@
 
   <modules>
     <module>demo1-dubbo-provider</module>
+    <module>demo1-dubbo-consumer</module>
+    <module>demo1-dubbo-interface</module>
   </modules>
 
   <build>
