@@ -7,12 +7,11 @@
 		<artifactId>demo</artifactId>
 		<version>${revision}</version>
 	</parent>
-	<artifactId>demo1-dubbo-provider</artifactId>
-	<name>demo1-dubbo-provider</name>
-	<description>demo1 dubbo service provider</description>
+	<artifactId>demo2-dubbo-consumer</artifactId>
+	<name>demo2-dubbo-consumer</name>
+	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
 		<dubbo.version>2.7.4.1</dubbo.version>
 		<maven.deploy.skip>true</maven.deploy.skip>
 	</properties>
@@ -38,6 +37,28 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-apache-dubbo-adapter</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-transport-simple-http</artifactId>
+			<version>1.7.2</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.dubbo</groupId>
@@ -46,7 +67,7 @@
 		</dependency>
 		<dependency>
 			<groupId>me.caiying</groupId>
-			<artifactId>demo1-dubbo-interface</artifactId>
+			<artifactId>demo2-dubbo-interface</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
@@ -54,37 +75,8 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.0.0</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.1.0</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>2.8.2</version>
-			</plugin>
-			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>me.caiying.demo1.Demo1ProviderApplication</mainClass>
-					<addResources>true</addResources>
-					<fork>true</fork>
-					<skip>false</skip>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-							<goal>build-info</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>

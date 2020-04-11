@@ -7,7 +7,7 @@
 		<artifactId>demo</artifactId>
 		<version>${revision}</version>
 	</parent>
-	<artifactId>demo1-dubbo-provider</artifactId>
+	<artifactId>demo2-dubbo-provider</artifactId>
 	<name>demo1-dubbo-provider</name>
 	<description>demo1 dubbo service provider</description>
 
@@ -40,13 +40,24 @@
 		</dependency>
 
 		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-apache-dubbo-adapter</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-transport-simple-http</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.dubbo</groupId>
 			<artifactId>dubbo-spring-boot-starter</artifactId>
 			<version>${dubbo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>me.caiying</groupId>
-			<artifactId>demo1-dubbo-interface</artifactId>
+			<artifactId>demo2-dubbo-interface</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
@@ -72,7 +83,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>me.caiying.demo1.Demo1ProviderApplication</mainClass>
+					<mainClass>me.caiying.demo2.Demo2ProviderApplication</mainClass>
 					<addResources>true</addResources>
 					<fork>true</fork>
 					<skip>false</skip>
