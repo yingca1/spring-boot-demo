@@ -94,10 +94,10 @@
       <version>${project.version}</version>
     </dependency>
   </dependencies>
-  <description>demo1 dubbo service provider</description>
+  <description>demo2 dubbo service provider</description>
   <modelVersion>4.0.0</modelVersion>
 
-  <name>demo1-dubbo-provider</name>
+  <name>demo2-dubbo-provider</name>
 
   <parent>
     <artifactId>demo</artifactId>

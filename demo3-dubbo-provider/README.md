@@ -1,0 +1,1 @@
+APOLLO_META=http://10.8.205.175:30002 mvn -pl demo2-dubbo-provider clean spring-boot:run -DskipTests

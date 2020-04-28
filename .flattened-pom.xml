@@ -64,6 +64,9 @@
     <module>demo2-dubbo-provider</module>
     <module>demo2-dubbo-consumer</module>
     <module>demo2-dubbo-interface</module>
+    <module>demo3-dubbo-provider</module>
+    <module>demo3-dubbo-consumer</module>
+    <module>demo3-dubbo-interface</module>
   </modules>
   <packaging>pom</packaging>
   <parent>

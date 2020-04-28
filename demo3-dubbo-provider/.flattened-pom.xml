@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>demo2-dubbo-provider</artifactId>
+  <artifactId>demo3-dubbo-provider</artifactId>
   <build>
     <plugins>
       <plugin>
@@ -23,7 +23,7 @@
         <configuration>
           <addResources>true</addResources>
           <fork>true</fork>
-          <mainClass>me.caiying.demo2.Demo2ProviderApplication</mainClass>
+          <mainClass>me.caiying.demo3.Demo3ProviderApplication</mainClass>
           <skip>false</skip>
         </configuration>
         <executions>
@@ -84,12 +84,12 @@
       <version>${dubbo.version}</version>
     </dependency>
     <dependency>
-      <artifactId>demo2-dubbo-interface</artifactId>
+      <artifactId>demo3-dubbo-interface</artifactId>
       <groupId>me.caiying</groupId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
-  <description>demo2 dubbo service provider</description>
+  <description>demo3 dubbo service provider</description>
   <groupId>me.caiying</groupId>
   <licenses>
     <license>
@@ -98,7 +98,7 @@
     </license>
   </licenses>
   <modelVersion>4.0.0</modelVersion>
-  <name>demo2-dubbo-provider</name>
+  <name>demo3-dubbo-provider</name>
   <parent>
     <artifactId>demo</artifactId>
     <groupId>me.caiying</groupId>

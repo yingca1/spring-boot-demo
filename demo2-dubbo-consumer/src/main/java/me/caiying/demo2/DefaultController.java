@@ -30,8 +30,10 @@ public class DefaultController {
   private static final ExecutorService pool =
       Executors.newFixedThreadPool(20, new NamedThreadFactory("demo2-dubbo-consumer-pool"));
   private final Logger logger = LoggerFactory.getLogger(getClass());
+
   @Reference(version = "1.0.0", url = "dubbo://127.0.0.1:12346")
   private SimpleService simpleService;
+
   @Reference(version = "1.0.0", url = "dubbo://127.0.0.1:12346")
   private SentinelFeatureService sentinelFeatureService;
 
