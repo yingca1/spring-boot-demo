@@ -8,8 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Demo1ProviderApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Demo1ProviderApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(Demo1ProviderApplication.class, args);
+  }
 }

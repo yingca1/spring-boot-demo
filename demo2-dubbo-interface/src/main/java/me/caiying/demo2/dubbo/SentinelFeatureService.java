@@ -5,5 +5,4 @@ public interface SentinelFeatureService {
   String case1();
 
   String case2();
-
 }
