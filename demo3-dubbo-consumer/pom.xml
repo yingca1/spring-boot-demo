@@ -4,6 +4,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <artifactId>demo3-dubbo-consumer</artifactId>
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -51,31 +59,40 @@
     </dependency>
 
     <dependency>
-      <artifactId>sentinel-apache-dubbo-adapter</artifactId>
-      <groupId>com.alibaba.csp</groupId>
-      <version>1.7.2</version>
-    </dependency>
-    <dependency>
-      <artifactId>sentinel-transport-simple-http</artifactId>
-      <groupId>com.alibaba.csp</groupId>
-      <version>1.7.2</version>
-    </dependency>
-    <dependency>
-      <artifactId>sentinel-parameter-flow-control</artifactId>
-      <groupId>com.alibaba.csp</groupId>
-      <version>1.7.2</version>
-    </dependency>
-    <dependency>
-      <artifactId>sentinel-datasource-apollo</artifactId>
-      <groupId>com.alibaba.csp</groupId>
-      <version>1.7.2</version>
-    </dependency>
-
-    <dependency>
       <artifactId>dubbo-spring-boot-starter</artifactId>
       <groupId>org.apache.dubbo</groupId>
       <version>${dubbo.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.dubbo</groupId>
+      <artifactId>dubbo-dependencies-zookeeper</artifactId>
+      <version>${dubbo.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.dubbo</groupId>
+      <artifactId>dubbo-monitor-default</artifactId>
+      <version>${dubbo.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.dubbo</groupId>
+      <artifactId>dubbo-spring-boot-actuator</artifactId>
+      <version>${dubbo.version}</version>
+    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>me.caiying</groupId>-->
+<!--      <artifactId>dubbo-monitor-prometheus</artifactId>-->
+<!--      <version>${project.version}</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>io.micrometer</groupId>-->
+<!--      <artifactId>micrometer-registry-prometheus</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>com.alibaba.middleware</groupId>-->
+<!--      <artifactId>metrics-core-api</artifactId>-->
+<!--      <version>2.1.0-SNAPSHOT</version>-->
+<!--    </dependency>-->
     <dependency>
       <artifactId>demo3-dubbo-interface</artifactId>
       <groupId>me.caiying</groupId>

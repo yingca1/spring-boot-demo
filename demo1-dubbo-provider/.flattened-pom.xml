@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>me.caiying</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>me.caiying</groupId>
   <artifactId>demo1-dubbo-provider</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>demo1-dubbo-provider</name>
+  <description>demo1 dubbo service provider</description>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+  <properties>
+    <dubbo.version>2.7.4.1</dubbo.version>
+    <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.dubbo</groupId>
+      <artifactId>dubbo-spring-boot-starter</artifactId>
+      <version>${dubbo.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>me.caiying</groupId>
+      <artifactId>demo1-dubbo-interface</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>
@@ -19,13 +69,8 @@
         <version>2.8.2</version>
       </plugin>
       <plugin>
+        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <addResources>true</addResources>
-          <fork>true</fork>
-          <mainClass>me.caiying.demo1.Demo1ProviderApplication</mainClass>
-          <skip>false</skip>
-        </configuration>
         <executions>
           <execution>
             <goals>
@@ -34,60 +79,13 @@
             </goals>
           </execution>
         </executions>
-        <groupId>org.springframework.boot</groupId>
+        <configuration>
+          <addResources>true</addResources>
+          <fork>true</fork>
+          <mainClass>me.caiying.demo1.Demo1ProviderApplication</mainClass>
+          <skip>false</skip>
+        </configuration>
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-    <dependency>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-      <groupId>org.springframework.boot</groupId>
-    </dependency>
-    <dependency>
-      <artifactId>spring-boot-starter-web</artifactId>
-      <groupId>org.springframework.boot</groupId>
-    </dependency>
-    <dependency>
-      <artifactId>spring-boot-devtools</artifactId>
-      <groupId>org.springframework.boot</groupId>
-      <optional>true</optional>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <artifactId>lombok</artifactId>
-      <groupId>org.projectlombok</groupId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <artifactId>dubbo-spring-boot-starter</artifactId>
-      <groupId>org.apache.dubbo</groupId>
-      <version>${dubbo.version}</version>
-    </dependency>
-    <dependency>
-      <artifactId>demo1-dubbo-interface</artifactId>
-      <groupId>me.caiying</groupId>
-      <version>${project.version}</version>
-    </dependency>
-  </dependencies>
-  <description>demo1 dubbo service provider</description>
-  <groupId>me.caiying</groupId>
-  <licenses>
-    <license>
-      <name>Apache License, Version 2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-    </license>
-  </licenses>
-  <modelVersion>4.0.0</modelVersion>
-  <name>demo1-dubbo-provider</name>
-  <parent>
-    <artifactId>demo</artifactId>
-    <groupId>me.caiying</groupId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <properties>
-    <dubbo.version>2.7.4.1</dubbo.version>
-    <maven.deploy.skip>true</maven.deploy.skip>
-    <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
-  </properties>
-  <version>0.0.1-SNAPSHOT</version>
 </project>

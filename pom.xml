@@ -51,6 +51,7 @@
   <groupId>me.caiying</groupId>
   <modelVersion>4.0.0</modelVersion>
   <modules>
+    <module>dubbo-monitor-prometheus</module>
     <module>demo1-dubbo-provider</module>
     <module>demo1-dubbo-consumer</module>
     <module>demo1-dubbo-interface</module>

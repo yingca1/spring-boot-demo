@@ -12,5 +12,6 @@
     <file url="file://$PROJECT_DIR$/demo3-dubbo-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo3-dubbo-provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo3-dubbo-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-monitor-prometheus/src/main/java" charset="UTF-8" />
   </component>
 </project>
